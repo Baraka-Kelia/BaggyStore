@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggy Fact - Trendy Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo"><i class="fas fa-tshirt"></i>Baggy Fact</a>
+                
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#offers">Special Offers</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <div class="wishlist-icon" id="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count" id="wishlist-count">0</span>
+                        <div class="wishlist-dropdown" id="wishlist-dropdown">
+                            <div class="wishlist-items" id="wishlist-items">
+                                <!-- Wishlist items will be added here -->
+                            </div>
+                            <div class="wishlist-total">
+                                <span>Items:</span>
+                                <span id="wishlist-total-items">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-icon" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                        <div class="cart-dropdown" id="cart-dropdown">
+                            <div class="cart-items" id="cart-items">
+                                <!-- Cart items will be added here -->
+                            </div>
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <span id="cart-total-price">$0.00</span>
+                            </div>
+                            <input type="text" class="discount-code" id="discount-code-input" placeholder="Enter discount code">
+                            <button class="buy-btn" id="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Express Your Style with Baggy Fact</h1>
+                <p>Discover the latest trends in streetwear and casual fashion with our collection of baggy pants, oversized hoodies, and more.</p>
+            </div>
+        </section>
+
+        <section class="container" id="marketplace">
+            <h2 class="section-title">Trending Now</h2>
+            
+            <div class="search-container">
+                <input type="text" class="search-bar" id="search-input" placeholder="Search for clothing...">
+                <div class="search-icon" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Pants">Pants</button>
+                <button class="category-btn" data-category="Hoodies">Hoodies</button>
+                <button class="category-btn" data-category="T-Shirts">T-Shirts</button>
+                <button class="category-btn" data-category="Jackets">Jackets</button>
+                <button class="category-btn" data-category="Shorts">Shorts</button>
+            </div>
+            
+            <div class="products-grid" id="products-container">
+                <!-- Products will be added here with JavaScript -->
+            </div>
+        </section>
+
+        <section class="special-offers container" id="offers">
+            <div class="offers-header">
+                <h2 class="section-title">Special Offers</h2>
+                <div class="offers-nav">
+                    <button class="offers-nav-btn" id="offers-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="offers-nav-btn" id="offers-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="offers-container" id="offers-container">
+                <div class="offer">
+                    <h3>Summer Collection</h3>
+                    <p>Get up to 30% off on our summer collection of baggy shorts and lightweight tees.</p>
+                    <span class="discount-badge">30% OFF</span>
+                </div>
+                
+                <div class="offer">
+                    <h3>New Customer Discount</h3>
+                    <p>First-time buyers get 15% off their entire order.</p>
+                    <span class="discount-badge">15% OFF</span>
+                </div>
+                
+                <div class="offer">
+                    <h3>Clearance Event</h3>
+                    <p>Limited time only - up to 50% off on last season's designs.</p>
+                    <span class="discount-badge">50% OFF</span>
+                </div>
+                
+                <div class="offer">
+                    <h3>Bundle & Save</h3>
+                    <p>Buy any 3 items and get 20% off your entire order.</p>
+                    <span class="discount-badge">20% OFF</span>
+                </div>
+                
+                <div class="offer">
+                    <h3>Free Shipping</h3>
+                    <p>Free worldwide shipping on orders over $100.</p>
+                    <span class="discount-badge">FREE SHIPPING</span>
+                </div>
+                
+                <div class="offer">
+                    <h3>Back to School</h3>
+                    <p>Special collection for back to school with comfy and stylish outfits.</p>
+                    <span class="discount-badge">25% OFF</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-name">Product Name</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            
+            <div class="modal-product">
+                <img id="modal-product-img" src="" alt="Product Image">
+                <div class="modal-product-info">
+                    <p id="modal-product-price" class="product-price">$0.00</p>
+                    <div class="modal-rating" id="modal-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p id="modal-product-desc">Product description will appear here.</p>
+                    
+                    <div class="size-selector" id="size-selector">
+                        <button class="size-btn" data-size="S">S</button>
+                        <button class="size-btn" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                    </div>
+                    <div class="size-chart-btn" id="size-chart-btn">Size Guide</div>
+                </div>
+            </div>
+            
+            <button class="add-to-cart-btn" id="add-to-cart-modal">ADD TO CART</button>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Baggy Fact</h3>
+                    <p>We offer trendy and comfortable streetwear fashion that allows you to express your unique style. Our pieces are designed for comfort without compromising on style.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#marketplace">Marketplace</a>
+                    <a href="#offers">Special Offers</a>
+                    <a href="#footer">Contact Us</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 456 Fashion Street, Trend City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 987-6543</p>
+                    <p><i class="fas fa-envelope"></i> info@baggyfact.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Baggy Fact. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
